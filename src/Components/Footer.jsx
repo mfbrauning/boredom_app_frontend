@@ -1,5 +1,5 @@
 function Footer(props){
-    return <div>Footer</div>
+    return <div>Created by Fran, Anthony, Faith</div>
 }
 
 export default Footer
