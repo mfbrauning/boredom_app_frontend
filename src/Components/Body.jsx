@@ -9,10 +9,12 @@ import { useState, useEffect } from "react";
 function Body(props) {
   // Movies
 
+
   // Movie State
   const [movies, setMovies] = useState(null);
   // Movie Link
   const moviesURL = "https://boredom-app-backend.herokuapp.com/movies/";
+
 
   const getMovies = async () => {
     const response = await fetch(moviesURL);
@@ -54,6 +56,7 @@ function Body(props) {
   // useEffect for Moives
   useEffect(() => getMovies(), []);
 
+
   //Books
 
   // books state
@@ -78,7 +81,6 @@ function Body(props) {
     getBooks();
   };
 
-  useEffect(() => getBooks(), []);
 
   //Update books
   const updateBooks = async (book, id) => {
@@ -91,6 +93,7 @@ function Body(props) {
     });
     getBooks();
   };
+  
   // delete book okf
   const deleteBooks = async (id) => {
     await fetch(URL + id, {
@@ -98,6 +101,10 @@ function Body(props) {
     });
     getBooks();
   };
+
+
+    useEffect(() => getBooks() , [])
+
 
   return (
     <div className="main">
@@ -119,11 +126,13 @@ function Body(props) {
           }
         />
 
-        <Route path="/books" element={<BookIndex />} />
+
+        <Route path="/books" element={<BookIndex books={books} createBooks={createBooks} />} />
         <Route path="/books/:id" element={<BookShow />} />
       </Routes>
     </div>
   );
+
 }
 
 export default Body;

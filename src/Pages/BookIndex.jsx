@@ -41,25 +41,69 @@ function BookIndex(props){
         onChange={handleChange}/>
          <input
         type="text"
-        value={newForm.title}
-        name="title"
-        placeholder="title"
+        value={newForm.author}
+        name="author"
+        placeholder="author"
         onChange={handleChange}/>
          <input
         type="text"
-        value={newForm.title}
-        name="title"
-        placeholder="title"
+        value={newForm.year}
+        name="year"
+        placeholder="year"
         onChange={handleChange}/>
          <input
         type="text"
-        value={newForm.title}
-        name="title"
-        placeholder="title"
+        value={newForm.genre}
+        name="genre"
+        placeholder="genre"
         onChange={handleChange}/>
+         <input
+        type="text"
+        value={newForm.image}
+        name="image"
+        placeholder="image"
+        onChange={handleChange}/>
+         <input
+        type="text"
+        value={newForm.link}
+        name="link"
+        placeholder="link"
+        onChange={handleChange}/>
+        <input type="submit" value="Add Book"/>
     </form>
 
-    return <div>Book Index</div>
+    if (props.books) {
+        return (
+            <div>
+                {form}
+                <div>
+                    {props.books.map((book) => {
+                        return (
+                            <div key={book._id} className="book">  
+                                {book.title}<br/>
+                                {book.author}<br/>
+                                {book.year}<br/>
+                                {book.genre}<br/>
+                                <img src={book.image} alt={book.title}/><br/>
+                                <a href={book.link} alt={book.title}>Goodreads</a><br/>
+                                <Link to={`/books/${book._id}`}>
+                                    <button>edit book</button>
+                                </Link>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                {form}
+                <h2>Loading...</h2>
+            </div>
+        )
+    }
+
 }
 
 export default BookIndex

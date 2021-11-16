@@ -18,6 +18,7 @@ function Footer(props) {
       </div>
     </Footer>
   );
+
 }
 
 export default Footer;
