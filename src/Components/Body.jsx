@@ -94,7 +94,7 @@ function Body(props) {
     getBooks();
   };
   
-  // delete book okf
+  // delete books
   const deleteBooks = async (id) => {
     await fetch(URL + id, {
       method: "delete",
