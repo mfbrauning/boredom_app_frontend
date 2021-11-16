@@ -103,7 +103,7 @@ function Body(props) {
           }
         />
 
-        <Route path="/books" element={<BookIndex />} />
+        <Route path="/books" element={<BookIndex books={books} createBooks={createBooks} />} />
         <Route path="/books/:id" element={<BookShow />} />
       </Routes>
     </div>
