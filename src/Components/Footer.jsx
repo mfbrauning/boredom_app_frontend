@@ -1,6 +1,6 @@
 function Footer(props) {
   return (
-    <Footer>
+    <footer>
       <div>
         <h4>Created by</h4>
         <ul>
@@ -16,7 +16,7 @@ function Footer(props) {
           <li>SCSS</li>
         </ul>
       </div>
-    </Footer>
+    </footer>
   );
 
 }
