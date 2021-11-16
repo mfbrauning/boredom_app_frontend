@@ -19,7 +19,7 @@ function MovieIndex(props){
     // Copy State
     const newState = { ...newForm };
     // Update State
-    newState[event.target.title] = event.target.value;
+    newState[event.target.name] = event.target.value;
     setForm(newState);
   };
 
