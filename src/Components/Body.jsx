@@ -4,13 +4,17 @@ import MovieIndex from "../Pages/MovieIndex";
 import MovieShow from "../Pages/MovieShow";
 import MainPage from "../Pages/MainPage";
 import { Route, Routes } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
+
 
 function Body(props) {
+  // Movies
+  
   // Movie State
   const [movies, setMovies] = useState(null);
   // Movie Link
   const moviesURL = "https://boredom-app-backend.herokuapp.com/movies/";
+ 
 
   const getMovies = async () => {
     const response = await fetch(moviesURL);
@@ -51,6 +55,33 @@ function Body(props) {
   };
   // useEffect for Moives
   useEffect(() => getMovies(), []);
+  
+  
+  //Books
+  
+    // books state
+    const [books, setBooks] = useState(null);
+    // books URL
+    const booksURL = "https://boredom-app-backend.herokuapp.com/books/";
+
+    const getBooks = async () => {
+        const response = await fetch(booksURL);
+        const data = await response.json();
+        setBooks(data)
+    }
+
+    const createBooks = async (book) => {
+        await fetch(booksURL, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(book)
+        })
+        getBooks()
+    }
+
+    useEffect(() => getBooks() , [])
 
   return (
     <div className="main">
@@ -77,6 +108,7 @@ function Body(props) {
       </Routes>
     </div>
   );
+
 }
 
 export default Body;
