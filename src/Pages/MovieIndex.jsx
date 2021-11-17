@@ -97,6 +97,7 @@ function MovieIndex(props){
         placeholder="Link Movie Trailer"
         onChange={handleChange}
       />
+      <input type="submit" value="Add New Movie"/>
     </form>
   );
 
