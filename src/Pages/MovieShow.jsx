@@ -99,12 +99,12 @@ function MovieShow(props){
 
     return (
         <div>
-            <h1>{movie.title}</h1>
-            <h3>{movie.director}</h3>
-              <h3>{movie.year}</h3>
-              <h3>{movie.genre}</h3>
-              <h3>{movie.rating}</h3>
-              <h3>{movie.link}</h3>
+            <h1>Title: {movie.title}</h1>
+            <h3>Director: {movie.director}</h3>
+              <h3>Year: {movie.year}</h3>
+              <h3>Genre: {movie.genre}</h3>
+              <h3>Rating: {movie.rating}</h3>
+              <h3>IMDB: {movie.link}</h3>
               <img src={movie.image} />
               <iframe width="100%" height="820" src={movie.video}></iframe>
             {form}
