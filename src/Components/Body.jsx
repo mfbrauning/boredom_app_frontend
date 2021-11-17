@@ -89,10 +89,15 @@ function Body(props) {
     });
     getBooks();
   };
+<<<<<<< HEAD
 
   // delete book okf
+=======
+  
+  // delete books
+>>>>>>> 4b2b6abfd304b990f6dfc47ee0c2a1e52ed77bab
   const deleteBooks = async (id) => {
-    await fetch(URL + id, {
+    await fetch(booksURL + id, {
       method: "delete",
     });
     getBooks();
@@ -120,11 +125,17 @@ function Body(props) {
           }
         />
 
+<<<<<<< HEAD
         <Route
           path="/books"
           element={<BookIndex books={books} createBooks={createBooks} />}
         />
         <Route path="/books/:id" element={<BookShow />} />
+=======
+
+        <Route path="/books" element={<BookIndex books={books} createBooks={createBooks} />} />
+        <Route path="/books/:id" element={<BookShow books={books} updateBooks={updateBooks} deleteBooks={deleteBooks} />} />
+>>>>>>> 4b2b6abfd304b990f6dfc47ee0c2a1e52ed77bab
       </Routes>
     </div>
   );
