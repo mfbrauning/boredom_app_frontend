@@ -103,7 +103,7 @@ function Body(props) {
   return (
     <div className="main">
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/" element={<MainPage movies={movies} books={books} />} />
         <Route
           path="/movies"
           element={<MovieIndex movies={movies} createMovie={createMovie} />}
