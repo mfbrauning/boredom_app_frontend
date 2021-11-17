@@ -9,12 +9,10 @@ import { useState, useEffect } from "react";
 function Body(props) {
   // Movies
 
-
   // Movie State
   const [movies, setMovies] = useState(null);
   // Movie Link
   const moviesURL = "https://boredom-app-backend.herokuapp.com/movies/";
-
 
   const getMovies = async () => {
     const response = await fetch(moviesURL);
@@ -56,7 +54,6 @@ function Body(props) {
   // useEffect for Moives
   useEffect(() => getMovies(), []);
 
-
   //Books
 
   // books state
@@ -81,7 +78,6 @@ function Body(props) {
     getBooks();
   };
 
-
   //Update books
   const updateBooks = async (book, id) => {
     await fetch(booksURL + id, {
@@ -93,8 +89,10 @@ function Body(props) {
     });
     getBooks();
   };
+
   
   // delete books
+
   const deleteBooks = async (id) => {
     await fetch(booksURL + id, {
       method: "delete",
@@ -102,14 +100,12 @@ function Body(props) {
     getBooks();
   };
 
-
-    useEffect(() => getBooks() , [])
-
+  useEffect(() => getBooks(), []);
 
   return (
     <div className="main">
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/" element={<MainPage movies={movies} books={books} />} />
         <Route
           path="/movies"
           element={<MovieIndex movies={movies} createMovie={createMovie} />}
@@ -127,12 +123,13 @@ function Body(props) {
         />
 
 
+
         <Route path="/books" element={<BookIndex books={books} createBooks={createBooks} />} />
         <Route path="/books/:id" element={<BookShow books={books} updateBooks={updateBooks} deleteBooks={deleteBooks} />} />
+
       </Routes>
     </div>
   );
-
 }
 
 export default Body;

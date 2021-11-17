@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 function Header(props) {
@@ -15,7 +14,6 @@ function Header(props) {
       </Link>
     </nav>
   );
-
 }
 
 export default Header;
