@@ -101,6 +101,20 @@ function Body(props) {
 
   useEffect(() => getBooks(), []);
 
+  //snacks
+  const snacksURL =
+    "https://api.spoonacular.com/recipes/random?apiKey=64a5195b295041adad49218b9a533604&number=1&tags=snack";
+
+  const [snacks, setSnacks] = useState(null);
+
+  const getSnacks = async () => {
+    const response = await fetch(snacksURL);
+    const data = await response.json();
+
+    setSnacks(data);
+  };
+  useEffect(() => getSnacks(), []);
+
   return (
     <div className="main">
       <Routes>
@@ -114,6 +128,7 @@ function Body(props) {
           path="/movies/:id"
           element={
             <MovieShow
+              snacks={snacks}
               movies={movies}
               updateMovie={updateMovie}
               deleteMovie={deleteMovie}
@@ -129,6 +144,7 @@ function Body(props) {
           path="/books/:id"
           element={
             <BookShow
+              snacks={snacks}
               books={books}
               updateBooks={updateBooks}
               deleteBooks={deleteBooks}
