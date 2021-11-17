@@ -111,13 +111,9 @@ function MovieIndex(props){
               <Link to={`/movies/${movie._id}`}>
                 <h1>{movie.title}</h1>
               </Link>
-              <h3>Director: {movie.director}</h3>
-              <h3>Year: {movie.year}</h3>
               <h3>Genre: {movie.genre}</h3>
               <h3>Rating: {movie.rating}</h3>
-              <h3>IMDB: {movie.link}</h3>
               <img src={movie.image} />
-              <iframe width="100%" height="820" src={movie.video}></iframe>
             </div>
           );
         })}
