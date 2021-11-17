@@ -96,7 +96,7 @@ function Body(props) {
   
   // delete books
   const deleteBooks = async (id) => {
-    await fetch(URL + id, {
+    await fetch(booksURL + id, {
       method: "delete",
     });
     getBooks();
@@ -128,7 +128,7 @@ function Body(props) {
 
 
         <Route path="/books" element={<BookIndex books={books} createBooks={createBooks} />} />
-        <Route path="/books/:id" element={<BookShow />} />
+        <Route path="/books/:id" element={<BookShow books={books} updateBooks={updateBooks} deleteBooks={deleteBooks} />} />
       </Routes>
     </div>
   );
