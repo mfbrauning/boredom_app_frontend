@@ -28,11 +28,13 @@ function BookShow(props) {
 
       return (
         <div className="snacks">
-          <h2>{snacks.recipes[0].title}</h2>
-          <img src={snacks.recipes[0].image} />
-          <br />
+          <div>
+            <h2>{snacks.recipes[0].title}</h2>
+            <img src={snacks.recipes[0].image} />
+            <br />
+          </div>
 
-          <p>
+          <p className="snackText">
             <ul>
               {props.snacks.recipes[0].analyzedInstructions[0].steps.map(
                 (step) => {
@@ -116,9 +118,18 @@ function BookShow(props) {
 
     return (
       <>
-        <div className="book">
-          <h1>{book.title}</h1>
-          <img src={book.image} alt={book.title} />
+        <div className="book showpages">
+          <div>
+            <h1>{book.title}</h1>
+            <img src={book.image} alt={book.title} />
+          </div>
+
+          <div>
+            <h2>{book.author}</h2>
+            <h3>{book.year}</h3>
+            <h4>{book.genre}</h4>
+            <a href={book.link}>Goodreads</a>
+          </div>
         </div>
         <section> {newSnack()}</section>
         <section>

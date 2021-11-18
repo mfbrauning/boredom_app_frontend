@@ -1,16 +1,30 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Header(props) {
-  const [navbarOpen, setNavbarOpen] = useState(true);
+  const [navbarOpen, setNavbarOpen] = useState();
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
   };
 
   return (
-    <nav className="nav">
-      <button onClick={handleToggle}>{navbarOpen ? "open" : "close"}</button>
+    <>
+      <nav className="nav">
+        <img src="https://i.imgur.com/HLDYhVj.png" alt="" />
+        <button onClick={handleToggle}>
+          {navbarOpen ? (
+            <img src="https://img.favpng.com/16/13/21/computer-icons-cross-delete-button-desktop-wallpaper-png-favpng-bRPiPNtSuw4khCw13rsDc3LpQ.jpg" />
+          ) : (
+            <img src="https://cdn0.iconfinder.com/data/icons/heroicons-ui/24/icon-menu-512.png" />
+          )}
+        </button>
+      </nav>
       <ul className={`navMenu ${navbarOpen ? "showMenu" : ""}`}>
+        <li>
+          <button onClick={handleToggle}>
+            <img src="https://i.imgur.com/wttvbes.png" />
+          </button>
+        </li>
         <li>
           <Link to="/">
             <div className="home">Home</div>
@@ -27,7 +41,7 @@ function Header(props) {
           </Link>
         </li>
       </ul>
-    </nav>
+    </>
   );
 }
 
