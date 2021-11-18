@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function MovieIndex(props){
-      // State to hold form data
+function MovieIndex(props) {
+  // State to hold form data
   const [newForm, setForm] = useState({
     title: "",
     director: "",
@@ -97,7 +97,7 @@ function MovieIndex(props){
         placeholder="Link Movie Trailer"
         onChange={handleChange}
       />
-      <input type="submit" value="Add New Movie"/>
+      <input className="add" type="submit" value="Add New Movie" />
     </form>
   );
 
@@ -129,4 +129,4 @@ function MovieIndex(props){
   }
 }
 
-export default MovieIndex
+export default MovieIndex;
