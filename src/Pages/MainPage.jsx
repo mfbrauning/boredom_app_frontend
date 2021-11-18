@@ -22,7 +22,7 @@ function MainPage(props) {
   }, [props.books]);
 
   return (
-    <section>
+    <section className="mainPage">
       <div>
         <img src={mainState.image} alt={mainState.title} />
         <Link to={`/movies/${mainState._id}`}>

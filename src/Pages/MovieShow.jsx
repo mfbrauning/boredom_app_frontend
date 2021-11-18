@@ -15,6 +15,7 @@ function MovieShow(props) {
       setEditForm(movie);
     }
   }, [props.movies]);
+
   const newSnack = () => {
     if (snacks) {
       const getSnack = () => {
@@ -27,11 +28,12 @@ function MovieShow(props) {
 
       return (
         <div className="snacks">
-          <h2>{snacks.recipes[0].title}</h2>
-          <img src={snacks.recipes[0].image} />
-          <br />
-
-          <p>
+          <div>
+            <h2>{snacks.recipes[0].title}</h2>
+            <img src={snacks.recipes[0].image} />
+            <br />
+          </div>
+          <p className="snackText">
             <ul>
               {props.snacks.recipes[0].analyzedInstructions[0].steps.map(
                 (step) => {
@@ -128,17 +130,27 @@ function MovieShow(props) {
     );
 
     return (
-      <>
-        <div>
-          <h1>Title: {movie.title}</h1>
-          <h3>Director: {movie.director}</h3>
-          <h3>Year: {movie.year}</h3>
-          <h3>Genre: {movie.genre}</h3>
-          <h3>Rating: {movie.rating}</h3>
-          <h3><a href={movie.link}>IMDB Page</a></h3>
-          <img src={movie.image} />
-          <iframe width="100%" height="820" src={movie.video}></iframe>
+
+      <section>
+        <div className="showPages">
+          <div>
+            <h1>{movie.title}</h1>
+            <img src={movie.image} />
+          </div>
+
+          <div>
+            <h3>Director: {movie.director}</h3>
+            <h3>Year: {movie.year}</h3>
+            <h3>Genre: {movie.genre}</h3>
+            <h3>Rating: {movie.rating}</h3>
+
+            <a href={movie.link}>
+              <h3>IMDB</h3>
+            </a>
+          </div>
+
         </div>
+        <iframe width="70%" height="820" src={movie.video}></iframe>
         <section> {newSnack()}</section>
         <section>
           {form}
@@ -146,7 +158,7 @@ function MovieShow(props) {
             <span>Delete Movie</span>
           </button>
         </section>
-      </>
+      </section>
     );
   } else {
     return <h1>No Movie found</h1>;

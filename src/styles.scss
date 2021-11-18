@@ -1,14 +1,135 @@
+// * {
+//   outline: 2px solid black;
+// }
+//nav
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 .navMenu {
   display: none;
 }
 .showMenu {
   display: block;
+  height: 50vh;
+  position: fixed;
+  top: 0vh;
+  right: 0;
+  margin: 2px;
+  background-color: rgb(231, 243, 243);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+}
+nav > img,
+nav > button > img,
+ul > li > button > img {
+  height: 100%;
+}
+nav > button {
+  height: 50%;
+  margin: 10px;
+}
+ul > li > button {
+  height: 30px;
+}
+//all li's
+li {
+  list-style: none;
+  margin: 10px;
+  text-align: center;
+}
+//all img
+img {
+  height: 150px;
+  width: auto;
+}
+//all main content
+.main {
+  flex: 1 0 auto;
+  margin: 10px;
+}
+//main page
+.mainPage {
+  display: flex;
+  justify-content: space-around;
 }
 
-img {
-    height: 750px;
-    width: auto;
+//snacks
+.snacks {
+  display: flex;
+  width: 70vh;
+  margin: 0 auto;
 }
+.snackText {
+  ul {
+    height: 40vh;
+    overflow: scroll;
+    li {
+      font-size: 1rem;
+    }
+  }
+}
+//index page content
+.cards {
+  display: flex;
+  width: 100vh;
+  flex-wrap: wrap;
+}
+.cards > div {
+  width: 30vh;
+  display: grid;
+  grid-template-areas:
+    "img img img"
+    "h2 h2 h2"
+    "h3 h3 h3"
+    "h4 h4 h4";
+  margin: 10px auto;
+
+  img {
+    grid-area: img;
+    margin: 0 auto;
+  }
+  h2 {
+    grid-area: h2;
+    // margin: 2px;
+  }
+  h3 {
+    grid-area: h3;
+    font-size: 1rem;
+  }
+  h4 {
+    grid-area: h4;
+    margin-top: 2px;
+  }
+  a {
+    width: 30vh;
+    text-decoration: none;
+  }
+}
+//show pages
+.showPages {
+  display: flex;
+  justify-content: space-evenly;
+}
+iframe {
+  height: 40vh;
+  margin: 20px;
+}
+
+//footer
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -50px;
+  flex: 0;
+  // background-color: coral;
+}
+
 #delete {
   border-radius: 4px;
   background-color: #f4511e;
@@ -89,3 +210,4 @@ img {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+

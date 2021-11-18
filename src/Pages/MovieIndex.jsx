@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function MovieIndex(props){
-      // State to hold form data
+function MovieIndex(props) {
+  // State to hold form data
   const [newForm, setForm] = useState({
     title: "",
     director: "",
@@ -97,7 +97,9 @@ function MovieIndex(props){
         placeholder="Link Movie Trailer"
         onChange={handleChange}
       />
+
       <input className="add" type="submit" value="Add New Movie"/>
+
     </form>
   );
 
@@ -105,18 +107,20 @@ function MovieIndex(props){
     return (
       <section>
         {form}
-        {props.movies.map((movie) => {
-          return (
-            <div key={movie._id}>
-              <Link to={`/movies/${movie._id}`}>
-                <h1>{movie.title}</h1>
-              </Link>
-              <h3>Genre: {movie.genre}</h3>
-              <h3>Rating: {movie.rating}</h3>
-              <img src={movie.image} />
-            </div>
-          );
-        })}
+        <div className="cards">
+          {props.movies.map((movie) => {
+            return (
+              <div key={movie._id}>
+                <Link to={`/movies/${movie._id}`}>
+                  <h2>{movie.title}</h2>
+                </Link>
+                <h3>Genre: {movie.genre}</h3>
+                <h4>Rating: {movie.rating}</h4>
+                <img src={movie.image} />
+              </div>
+            );
+          })}
+        </div>
       </section>
     );
   } else {
@@ -129,4 +133,4 @@ function MovieIndex(props){
   }
 }
 
-export default MovieIndex
+export default MovieIndex;
