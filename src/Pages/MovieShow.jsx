@@ -135,7 +135,7 @@ function MovieShow(props) {
           <h3>Year: {movie.year}</h3>
           <h3>Genre: {movie.genre}</h3>
           <h3>Rating: {movie.rating}</h3>
-          <h3>IMDB: {movie.link}</h3>
+          <h3><a href={movie.link}>IMDB Page</a></h3>
           <img src={movie.image} />
           <iframe width="100%" height="820" src={movie.video}></iframe>
         </div>
