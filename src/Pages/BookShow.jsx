@@ -110,7 +110,7 @@ function BookShow(props) {
           placeholder="link"
           onChange={handleChange}
         />
-        <input type="submit" value="Update Book" />
+        <input className="update" type="submit" value="Update Book" />
       </form>
     );
 

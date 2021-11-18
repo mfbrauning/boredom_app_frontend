@@ -123,7 +123,7 @@ function MovieShow(props) {
           placeholder="Link Movie Trailer"
           onChange={handleChange}
         />
-        <input type="submit" value="Update Movie" />
+        <input className="update" type="submit" value="Update Movie" />
       </form>
     );
 
@@ -143,7 +143,7 @@ function MovieShow(props) {
         <section>
           {form}
           <button id="delete" onClick={removeMovie}>
-            Delete Movie
+            <span>Delete Movie</span>
           </button>
         </section>
       </>
