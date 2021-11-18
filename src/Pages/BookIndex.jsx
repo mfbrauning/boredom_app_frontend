@@ -82,27 +82,23 @@ function BookIndex(props) {
     return (
       <div>
         {form}
-        <div>
+        <div className="cards">
           {props.books.map((book) => {
             return (
               <div key={book._id} className="book">
-                {book.title}
-                <br />
-                {book.author}
-                <br />
-                {book.year}
-                <br />
-                {book.genre}
-                <br />
-                <img src={book.image} alt={book.title} />
-                <br />
-                <a href={book.link} alt={book.title}>
-                  Goodreads
-                </a>
-                <br />
                 <Link to={`/books/${book._id}`}>
-                  <button>edit book</button>
+                  <h2> {book.title}</h2>
                 </Link>
+
+                <h3>Genre: {book.genre} </h3>
+
+                <img src={book.image} alt={book.title} />
+
+                <h4>
+                  <a href={book.link} alt={book.title}>
+                    Goodreads
+                  </a>
+                </h4>
               </div>
             );
           })}
