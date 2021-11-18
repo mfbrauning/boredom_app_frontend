@@ -74,7 +74,7 @@ function BookIndex(props) {
         placeholder="link"
         onChange={handleChange}
       />
-      <input type="submit" value="Add Book" />
+      <input className="add" type="submit" value="Add Book" />
     </form>
   );
 

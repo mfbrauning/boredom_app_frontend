@@ -125,11 +125,12 @@ function MovieShow(props) {
           placeholder="Link Movie Trailer"
           onChange={handleChange}
         />
-        <input type="submit" value="Update Movie" />
+        <input className="update" type="submit" value="Update Movie" />
       </form>
     );
 
     return (
+
       <section>
         <div className="showPages">
           <div>
@@ -147,13 +148,14 @@ function MovieShow(props) {
               <h3>IMDB</h3>
             </a>
           </div>
+
         </div>
         <iframe width="70%" height="820" src={movie.video}></iframe>
         <section> {newSnack()}</section>
         <section>
           {form}
           <button id="delete" onClick={removeMovie}>
-            Delete Movie
+            <span>Delete Movie</span>
           </button>
         </section>
       </section>
