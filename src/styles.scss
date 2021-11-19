@@ -63,16 +63,17 @@ img {
   display: flex;
   width: 70vh;
   margin: 0 auto;
+  justify-content: space-around;
 }
+
 .snackText {
-  ul {
-    height: 40vh;
-    overflow: scroll;
-    li {
-      font-size: 1rem;
-    }
+  height: 40vh;
+  overflow: scroll;
+  li {
+    font-size: 1rem;
   }
 }
+
 //index page content
 .cards {
   display: flex;
@@ -134,7 +135,7 @@ footer {
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   font-size: 20px;
   padding: 20px;
@@ -152,7 +153,7 @@ footer {
 }
 
 #delete span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -176,13 +177,15 @@ footer {
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-.add:hover {background-color: #3e8e41}
+.add:hover {
+  background-color: #3e8e41;
+}
 
 .add:active {
   background-color: #3e8e41;
@@ -203,11 +206,12 @@ footer {
   box-shadow: 0 9px #999;
 }
 
-.update:hover {background-color: #00bef8}
+.update:hover {
+  background-color: #00bef8;
+}
 
 .update:active {
   background-color: #0094f7;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-

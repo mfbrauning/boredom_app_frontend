@@ -34,15 +34,13 @@ function BookShow(props) {
             <br />
           </div>
 
-          <p className="snackText">
-            <ul>
-              {props.snacks.recipes[0].analyzedInstructions[0].steps.map(
-                (step) => {
-                  return <li> {step.step}</li>;
-                }
-              )}
-            </ul>
-          </p>
+          <ul className="snackText">
+            {props.snacks.recipes[0].analyzedInstructions[0].steps.map(
+              (step) => {
+                return <li key={step.index}> {step.step}</li>;
+              }
+            )}
+          </ul>
         </div>
       );
     }
