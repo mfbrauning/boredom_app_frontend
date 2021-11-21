@@ -106,13 +106,13 @@ li {
 }
 //all img
 img {
-  height: 150px;
+  height: 250px;
   width: auto;
 }
 //all main content
 .main {
   flex: 1 0 auto;
-  margin: 10px;
+  margin: 100px 10px;
 }
 //main page
 .mainPage {
@@ -170,7 +170,7 @@ img {
 
     img {
       grid-area: img;
-      height: 150px;
+      height: 250px;
       width: auto;
       margin: 0 auto;
     }
