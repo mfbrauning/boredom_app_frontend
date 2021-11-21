@@ -3,45 +3,70 @@ import { useState, useEffect } from "react";
 
 function Header(props) {
   const [navbarOpen, setNavbarOpen] = useState();
+  const [newForm, setNewForm] = useState({
+    name: "",
+    url: "",
+  });
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
   };
+  const handleChange = () => {
+    const newState = { ...newForm };
+    newState[event.target.name] = event.target.value;
+    setNewForm(newState);
+  };
+  const handleBookSubmit = (event) => {
+    event.preventDefault();
+  };
 
   return (
-    <>
+    <div className="navContainer">
       <nav className="nav">
-        <img src="https://i.imgur.com/HLDYhVj.png" alt="" />
+        <Link to="/">
+          <img src="https://i.imgur.com/3Sm3RMA.png" alt="" />
+        </Link>
+        <form>
+          <label>
+            <input
+              type="text"
+              value={newForm.name}
+              name="name"
+              onChange={handleChange}
+            />
+            <input type="submit" value="search for movies" />
+            <input type="submit" value="search for books" />
+          </label>
+        </form>
         <button onClick={handleToggle}>
           {navbarOpen ? (
-            <img src="https://img.favpng.com/16/13/21/computer-icons-cross-delete-button-desktop-wallpaper-png-favpng-bRPiPNtSuw4khCw13rsDc3LpQ.jpg" />
+            ""
           ) : (
-            <img src="https://cdn0.iconfinder.com/data/icons/heroicons-ui/24/icon-menu-512.png" />
+            <img src="https://img.icons8.com/material-outlined/48/000000/menu--v1.png" />
           )}
         </button>
       </nav>
-      <ul className={`navMenu ${navbarOpen ? "showMenu" : ""}`}>
-        <li>
-          <button onClick={handleToggle}>
-            <img src="https://i.imgur.com/wttvbes.png" />
-          </button>
-        </li>
-        <li>
+      <div className={`navMenu ${navbarOpen ? "showMenu" : ""}`}>
+        <div onClick={handleToggle}>
+          <img src="https://img.icons8.com/ios/100/000000/menu-squared-2--v2.png" />
+        </div>
+
+        <div>
           <Link to="/">
             <div className="home">Home</div>
           </Link>
-        </li>
-        <li>
+        </div>
+        <div>
           <Link to="/movies">
             <div>Movies</div>
           </Link>
-        </li>
-        <li>
+        </div>
+        <div>
           <Link to="/books">
             <div>Books</div>
           </Link>
-        </li>
-      </ul>
-    </>
+        </div>
+      </div>
+    </div>
   );
 }
 
