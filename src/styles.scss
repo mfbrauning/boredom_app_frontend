@@ -1,7 +1,16 @@
-// * {
-//   outline: 2px solid black;
-// }
+* {
+  // outline: 2px solid black;
+  box-sizing: border-box;
+}
+$maincolor: rgb(228, 42, 105);
+$lighterMain: rgb(252, 193, 51);
+$secondarycolor: rgb(40, 40, 47);
+$thirdcolor: rgb(63, 183, 79);
+
 //nav
+body {
+  margin: 0;
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -10,32 +19,85 @@
 .navMenu {
   display: none;
 }
+
 .showMenu {
-  display: block;
-  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30vh;
+  width: 30vh;
   position: fixed;
-  top: 0vh;
+  top: 4vh;
+  right: 0vh;
+  border-bottom: 2px solid $lighterMain;
+  box-shadow: 3px 4px 4px rgb(41, 41, 95);
+  margin: 0;
+  background-color: $maincolor;
+  //need to add slide in animation
+
+  img {
+    height: 3vh;
+  }
+
+  div {
+    margin: 2% 5%;
+    // margin: 0;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: justify;
+    letter-spacing: 5px;
+    color: $secondarycolor;
+    width: 30vh;
+
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      color: $lighterMain;
+    }
+  }
+  div:hover {
+    padding: 2px;
+    opacity: 70%;
+    cursor: pointer;
+  }
+}
+.navContainer {
+  border-top: 2px solid $lighterMain;
+  border-bottom: 2px solid $lighterMain;
+  position: fixed;
+  top: 0;
   right: 0;
-  margin: 2px;
-  background-color: rgb(231, 243, 243);
+  left: 0;
+  box-shadow: -3px -1px 8px rgb(41, 41, 95);
 }
 nav {
   display: flex;
   justify-content: space-between;
   height: 8vh;
+  background-color: $maincolor;
+  padding: 5px;
+
+  img {
+    height: 100%;
+    position: relative;
+    padding: 10px 0 0 0;
+  }
+  button {
+    height: 50%;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    img {
+      height: 100%;
+    }
+  }
+  button:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
 }
-nav > img,
-nav > button > img,
-ul > li > button > img {
-  height: 100%;
-}
-nav > button {
-  height: 50%;
-  margin: 10px;
-}
-ul > li > button {
-  height: 30px;
-}
+
 //all li's
 li {
   list-style: none;
@@ -56,6 +118,16 @@ img {
 .mainPage {
   display: flex;
   justify-content: space-around;
+  margin: 8vh;
+  a {
+    text-decoration: none;
+    //change color
+    color: $maincolor;
+  }
+  a:hover {
+    //hover color create a mixin
+    cursor: pointer;
+  }
 }
 
 //snacks
@@ -77,40 +149,64 @@ img {
 //index page content
 .cards {
   display: flex;
-  width: 100vh;
+  width: 100%;
   flex-wrap: wrap;
-}
-.cards > div {
-  width: 30vh;
-  display: grid;
-  grid-template-areas:
-    "img img img"
-    "h2 h2 h2"
-    "h3 h3 h3"
-    "h4 h4 h4";
-  margin: 10px auto;
+  margin: 0;
+  justify-content: space-between;
+  padding: 3%;
 
-  img {
-    grid-area: img;
-    margin: 0 auto;
-  }
-  h2 {
-    grid-area: h2;
-    // margin: 2px;
-  }
-  h3 {
-    grid-area: h3;
-    font-size: 1rem;
-  }
-  h4 {
-    grid-area: h4;
-    margin-top: 2px;
-  }
-  a {
-    width: 30vh;
-    text-decoration: none;
+  div {
+    width: 30%;
+
+    display: grid;
+    grid-template-areas:
+      "img img img"
+      "h2 h2 h2"
+      "h3 h3 h3"
+      "h4 h4 h4";
+    margin: 10px auto;
+
+    border-radius: 5%;
+
+    img {
+      grid-area: img;
+      width: 70%;
+      margin: 0 auto;
+    }
+    h2 {
+      grid-area: h2;
+      margin: 5px;
+      overflow-wrap: break-word;
+      color: $thirdcolor;
+      transition-duration: 1s;
+    }
+    h2:hover {
+      cursor: pointer;
+      //hover color
+    }
+    a:hover {
+      color: $maincolor;
+      cursor: pointer;
+    }
+    h3 {
+      grid-area: h3;
+      font-size: 1rem;
+      margin: 5px;
+    }
+    h4 {
+      grid-area: h4;
+      margin-top: 2px;
+      margin: 5px;
+    }
+    a {
+      width: 30vh;
+      text-decoration: none;
+      color: rgb(36, 82, 49);
+      transition-duration: 1s;
+    }
   }
 }
+
 //show pages
 .showPages {
   display: flex;
@@ -128,7 +224,6 @@ footer {
   width: 100%;
   margin-top: -50px;
   flex: 0;
-  // background-color: coral;
 }
 
 #delete {
