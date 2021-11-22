@@ -137,6 +137,9 @@ img {
     //hover color create a mixin
     cursor: pointer;
   }
+  img{
+    border:2px solid white;
+  }
 }
 
 //snacks
@@ -182,6 +185,7 @@ img {
       height: 250px;
       width: auto;
       margin: 0 auto;
+      box-shadow: -6px 4px 5px black;
     }
     h2 {
       grid-area: h2;
