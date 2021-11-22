@@ -123,6 +123,10 @@ img {
   background-color: plum;
   border-radius: 50px;
   box-shadow: 20px 20px 20px 20px gray;
+  padding:10px 40px 10px 10px;
+  span{
+    color: white;
+  }
   a {
     text-decoration: none;
     //change color
@@ -220,6 +224,9 @@ img {
 iframe {
   height: 40vh;
   margin: 20px;
+  border-radius: 60px;
+  box-shadow: -3px 3px 7px 10px black;
+  border-color: $lighterMain;
 }
 
 //footer
@@ -320,4 +327,29 @@ footer {
   background-color: plum;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding-top: 10px;
+}
+.booki{
+  background-color: plum;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding-top: 10px;
+}
+footer{
+  background-color: $maincolor;
+  border: 2px solid $lighterMain;
+  box-shadow: 2px 2px 2px 7px gray;
+  color: white;
+}
+input[type=text]:focus {
+  background-color: lightblue;
+}
+.show{
+  background-color: plum;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding-top: 10px;
 }

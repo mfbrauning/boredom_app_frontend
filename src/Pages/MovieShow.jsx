@@ -130,7 +130,7 @@ function MovieShow(props) {
     );
 
     return (
-      <section>
+      <section className="show">
         <div className="showPages">
           <div>
             <h1>{movie.title}</h1>

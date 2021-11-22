@@ -36,7 +36,7 @@ function MainPage(props) {
         </Link>
       </div>
       <div>
-      <h1>Be free of boredom and Dance or just watch a chill movie or read a freakin book for once! </h1>
+      <h1>Be free of boredom and <span>DANCE!!</span>, watch a chill movie, or read a freakin book for once! </h1>
         <iframe className="mainvideo" width="100%" height="100" src="https://www.youtube.com/embed/EmnSm_d2ll4?autoplay=1&mute=1"></iframe>
       </div>
     </section>

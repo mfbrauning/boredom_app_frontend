@@ -115,7 +115,7 @@ function BookShow(props) {
     );
 
     return (
-      <>
+      <section className="show">
         <div className="book showpages">
           <div>
             <h1>{book.title}</h1>
@@ -132,9 +132,9 @@ function BookShow(props) {
         <section> {newSnack()}</section>
         <section>
           {form} <br />
-          <button onClick={removeBooks}>Delete Book</button>
+          <button id="delete" onClick={removeBooks}><span>Delete Book</span></button>
         </section>
-      </>
+      </section>
     );
   } else {
     return <h1>No Book Found</h1>;

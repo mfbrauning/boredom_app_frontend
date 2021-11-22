@@ -103,7 +103,7 @@ function Body(props) {
 
   //snacks
   const snacksURL =
-    "https://api.spoonacular.com/recipes/random?apiKey=4d9f73729285496c944366488fb4afa1&number=1&tags=snack";
+    "https://api.spoonacular.com/recipes/random?apiKey=f1df0dc420c6411fa4733abe7f3b1bf1&number=1&tags=snack";
 
   const [snacks, setSnacks] = useState(null);
 
