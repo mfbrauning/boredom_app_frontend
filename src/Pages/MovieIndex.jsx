@@ -103,7 +103,7 @@ function MovieIndex(props) {
 
   if (props.movies) {
     return (
-      <section>
+      <section className="moviei">
         {form}
         <div className="cards">
           {props.movies.map((movie) => {

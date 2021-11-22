@@ -120,6 +120,9 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 8vh;
+  background-color: plum;
+  border-radius: 50px;
+  box-shadow: 20px 20px 20px 20px gray;
   a {
     text-decoration: none;
     //change color
@@ -179,7 +182,7 @@ img {
       grid-area: h2;
       margin: 5px;
       overflow-wrap: break-word;
-      color: $thirdcolor;
+      color: whitesmoke;
       transition-duration: 1s;
     }
     h2:hover {
@@ -311,4 +314,10 @@ footer {
   background-color: #0094f7;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.moviei{
+  background-color: plum;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px 4px gray;
 }
