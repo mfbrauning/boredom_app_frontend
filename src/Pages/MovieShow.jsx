@@ -130,14 +130,12 @@ function MovieShow(props) {
     );
 
     return (
-
       <section>
         <div className="showPages">
           <div>
             <h1>{movie.title}</h1>
             <img src={movie.image} />
           </div>
-
           <div>
             <h3>Director: {movie.director}</h3>
             <h3>Year: {movie.year}</h3>
@@ -148,7 +146,6 @@ function MovieShow(props) {
               <h3>IMDB</h3>
             </a>
           </div>
-
         </div>
         <iframe width="70%" height="820" src={movie.video}></iframe>
         <section> {newSnack()}</section>

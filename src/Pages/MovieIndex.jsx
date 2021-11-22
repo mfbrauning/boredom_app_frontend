@@ -97,15 +97,13 @@ function MovieIndex(props) {
         placeholder="Link Movie Trailer"
         onChange={handleChange}
       />
-
-      <input className="add" type="submit" value="Add New Movie"/>
-
+      <input className="add" type="submit" value="Add New Movie" />
     </form>
   );
 
   if (props.movies) {
     return (
-      <section>
+      <section className="moviei">
         {form}
         <div className="cards">
           {props.movies.map((movie) => {
