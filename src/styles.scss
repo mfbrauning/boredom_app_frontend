@@ -74,7 +74,7 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  height: 8vh;
+  height: 7vh;
   background-color: $maincolor;
   padding: 5px;
 
@@ -118,6 +118,7 @@ img {
 .mainPage {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin: 8vh;
   a {
     text-decoration: none;

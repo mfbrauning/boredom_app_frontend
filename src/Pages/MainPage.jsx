@@ -34,7 +34,10 @@ function MainPage(props) {
         <Link to={`/books/${mainBookState._id}`}>
           <h2>{mainBookState.title}</h2>
         </Link>
-        <iframe width="70%" height="820" src="https://www.youtube.com/embed/EmnSm_d2ll4?autoplay=1&mute=1"></iframe>
+      </div>
+      <div>
+      <h1>Be free of boredom and Dance or just watch a chill movie or read a freakin book for once! </h1>
+        <iframe className="mainvideo" width="100%" height="100" src="https://www.youtube.com/embed/EmnSm_d2ll4?autoplay=1&mute=1"></iframe>
       </div>
     </section>
   );
