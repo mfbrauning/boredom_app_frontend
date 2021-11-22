@@ -34,6 +34,7 @@ function MainPage(props) {
         <Link to={`/books/${mainBookState._id}`}>
           <h2>{mainBookState.title}</h2>
         </Link>
+        <iframe width="70%" height="820" src="https://www.youtube.com/embed/EmnSm_d2ll4?autoplay=1&mute=1"></iframe>
       </div>
     </section>
   );
