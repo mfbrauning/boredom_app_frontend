@@ -31,49 +31,50 @@ function BookIndex(props) {
   };
 
   const form = (
-    <form onSubmit={handleSubmit}>
+    <form className="edit" onSubmit={handleSubmit}>
+      Add A Book <br/>
       <input
         type="text"
         value={newForm.title}
         name="title"
         placeholder="Title"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.author}
         name="author"
         placeholder="Author"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.year}
         name="year"
         placeholder="Year"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.genre}
         name="genre"
         placeholder="Genre"
         onChange={handleChange}
-      />
+      /><br/>
       <input
         type="text"
         value={newForm.image}
         name="image"
         placeholder="Image"
         onChange={handleChange}
-      />
+      /><br/>
       <input
         type="text"
         value={newForm.link}
         name="link"
         placeholder="Link"
         onChange={handleChange}
-      />
+      /><br/>
       <input className="add" type="submit" value="Add Book" />
     </form>
   );
@@ -81,7 +82,7 @@ function BookIndex(props) {
   if (props.books) {
     return (
       <div className="booki">
-        {form}
+        
         <div className="cards">
           {props.books.map((book) => {
             return (
@@ -103,6 +104,7 @@ function BookIndex(props) {
             );
           })}
         </div>
+        {form}
       </div>
     );
   } else {
