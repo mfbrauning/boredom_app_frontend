@@ -26,3 +26,6 @@ app -> main -> index
 app -> main -> show
 
 ### problems we had?
+
+- we were going to add a search feature function
+- falling into an error with .find,forEach and .filter

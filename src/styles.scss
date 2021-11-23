@@ -17,7 +17,7 @@ $thirdcolor: rgb(63, 183, 79);
 //nav
 body {
   margin: 0;
-  font-family: 'Bad Script', cursive;
+  font-family: "Bad Script", cursive;
 }
 .App {
   display: flex;
@@ -132,11 +132,11 @@ img {
   background-color: plum;
   border-radius: 50px;
   box-shadow: 20px 20px 20px 20px gray;
-  padding:10px 20px 10px 10px;
-  h1{
+  padding: 10px 20px 10px 10px;
+  h1 {
     font-size: 40px;
   }
-  span{
+  span {
     font-size: 90px;
     color: white;
   }
@@ -149,8 +149,8 @@ img {
     //hover color create a mixin
     cursor: pointer;
   }
-  img{
-    border:2px solid white;
+  img {
+    border: 2px solid white;
   }
 }
 
@@ -282,10 +282,10 @@ footer {
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px #999;
-  font-family: 'Bad Script', cursive;
+  font-family: "Bad Script", cursive;
 }
 
-input[type=text]{
+input[type="text"] {
   font-size: 15px;
   width: 300px;
 }
@@ -302,7 +302,7 @@ input[type=text]{
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  font-family: 'Bad Script', cursive;
+  font-family: "Bad Script", cursive;
 }
 
 #delete span {
@@ -330,8 +330,8 @@ input[type=text]{
   right: 0;
 }
 
-
-.update, .add {
+.update,
+.add {
   padding: 10px;
   font-size: 15px;
   text-align: center;
@@ -342,43 +342,41 @@ input[type=text]{
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px #999;
-  font-family: 'Bad Script', cursive;
-
+  font-family: "Bad Script", cursive;
 }
 
-.update:hover, .add:hover {
+.update:hover,
+.add:hover {
   background-color: #bb82fc;
 }
 
-.update:active, .add:active {
+.update:active,
+.add:active {
   background-color: #9400f7;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-.moviei{
+.moviei {
   background-color: plum;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
   margin: 10px 10px 10px 10px;
   padding: 20px;
 }
-.booki{
+.booki {
   background-color: plum;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
   margin: 10px 10px 10px 10px;
   padding: 10px;
 }
-footer{
+footer {
   background-color: $maincolor;
   border: 2px solid $lighterMain;
   box-shadow: -3px -1px 8px rgb(41, 41, 95);
   color: white;
 }
-
-
-
 
 //media query
 @media screen and (min-width: 320px) and (max-width: 600px) {
@@ -423,6 +421,7 @@ footer{
   }
   .snacks {
     flex-direction: column;
+    width: 50%;
     img {
       width: auto;
     }
@@ -437,10 +436,10 @@ footer{
   }
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   background-color: lightblue;
 }
-.show{
+.show {
   background-color: plum;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
@@ -449,24 +448,23 @@ input[type=text]:focus {
 }
 
 @media (max-width: 600px) {
-  iframe{
+  iframe {
     height: 200px;
     width: 100%;
-  box-shadow: 4px 4px 9px black;
+    box-shadow: 4px 4px 9px black;
   }
-  .mainPage{
+  .mainPage {
     margin: 5px 10px 5px 10px;
-    h1{
+    h1 {
       font-size: 20px;
     }
-    span{
+    span {
       font-size: 40px;
       color: white;
     }
-    img{
+    img {
       height: 200px;
       width: 100%;
     }
   }
 }
-
