@@ -68,63 +68,64 @@ function MovieShow(props) {
     };
 
     const form = (
-      <form onSubmit={handleSubmit}>
+      <form className="edit" onSubmit={handleSubmit}>
+        Edit Movie <br/>
         <input
           type="text"
           value={editForm.title}
           name="title"
           placeholder="Title"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.director}
           name="director"
           placeholder="Director"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.year}
           name="year"
           placeholder="Year"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.genre}
           name="genre"
           placeholder="Genre"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.image}
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.rating}
           name="rating"
           placeholder="Rating"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.link}
           name="link"
           placeholder="Link to 3rd party Movie description"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.video}
           name="video"
           placeholder="Link Movie Trailer"
           onChange={handleChange}
-        />
+        /> <br/>
         <input className="update" type="submit" value="Update Movie" />
       </form>
     );

@@ -40,63 +40,64 @@ function MovieIndex(props) {
   };
 
   const form = (
-    <form onSubmit={handleSubmit}>
+    <form className="edit" onSubmit={handleSubmit}>
+      Add A Movie <br/>
       <input
         type="text"
         value={newForm.title}
         name="title"
         placeholder="Title"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.director}
         name="director"
         placeholder="Director"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.year}
         name="year"
         placeholder="Year"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.genre}
         name="genre"
         placeholder="Genre"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.image}
         name="image"
         placeholder="Image URL"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.rating}
         name="rating"
         placeholder="Rating"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.link}
         name="link"
         placeholder="Link to 3rd party Movie description"
         onChange={handleChange}
-      />
+      /> <br/>
       <input
         type="text"
         value={newForm.video}
         name="video"
         placeholder="Link Movie Trailer"
         onChange={handleChange}
-      />
+      /> <br/>
       <input className="add" type="submit" value="Add New Movie" />
     </form>
   );
@@ -104,7 +105,7 @@ function MovieIndex(props) {
   if (props.movies) {
     return (
       <section className="moviei">
-        {form}
+        
         <div className="cards">
           {props.movies.map((movie) => {
             return (
@@ -119,6 +120,7 @@ function MovieIndex(props) {
             );
           })}
         </div>
+        {form}
       </section>
     );
   } else {

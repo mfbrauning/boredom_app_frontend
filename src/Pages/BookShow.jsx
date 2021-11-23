@@ -67,49 +67,50 @@ function BookShow(props) {
     };
 
     const form = (
-      <form onSubmit={handleSubmit}>
+      <form className="edit" onSubmit={handleSubmit}>
+        Edit Book <br/>
         <input
           type="text"
           value={editForm.title}
           name="title"
           placeholder="title"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.author}
           name="author"
           placeholder="author"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.year}
           name="year"
           placeholder="year"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.genre}
           name="genre"
           placeholder="genre"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.image}
           name="image"
           placeholder="image"
           onChange={handleChange}
-        />
+        /> <br/>
         <input
           type="text"
           value={editForm.link}
           name="link"
           placeholder="link"
           onChange={handleChange}
-        />
+        /><br/>
         <input className="update" type="submit" value="Update Book" />
       </form>
     );
