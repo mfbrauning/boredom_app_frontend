@@ -23,7 +23,7 @@ function Header(props) {
     <div className="navContainer">
       <nav className="nav">
         <Link to="/">
-          <img src="https://i.imgur.com/3Sm3RMA.png" alt="" />
+          <img src="https://i.imgur.com/3Sm3RMA.png" alt="icon" />
         </Link>
         <form>
           <label>

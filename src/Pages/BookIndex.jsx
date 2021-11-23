@@ -36,42 +36,42 @@ function BookIndex(props) {
         type="text"
         value={newForm.title}
         name="title"
-        placeholder="title"
+        placeholder="Title"
         onChange={handleChange}
       />
       <input
         type="text"
         value={newForm.author}
         name="author"
-        placeholder="author"
+        placeholder="Author"
         onChange={handleChange}
       />
       <input
         type="text"
         value={newForm.year}
         name="year"
-        placeholder="year"
+        placeholder="Year"
         onChange={handleChange}
       />
       <input
         type="text"
         value={newForm.genre}
         name="genre"
-        placeholder="genre"
+        placeholder="Genre"
         onChange={handleChange}
       />
       <input
         type="text"
         value={newForm.image}
         name="image"
-        placeholder="image"
+        placeholder="Image"
         onChange={handleChange}
       />
       <input
         type="text"
         value={newForm.link}
         name="link"
-        placeholder="link"
+        placeholder="Link"
         onChange={handleChange}
       />
       <input className="add" type="submit" value="Add Book" />
@@ -80,7 +80,7 @@ function BookIndex(props) {
 
   if (props.books) {
     return (
-      <div>
+      <div className="booki">
         {form}
         <div className="cards">
           {props.books.map((book) => {

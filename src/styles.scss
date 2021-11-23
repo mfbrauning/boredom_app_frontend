@@ -7,9 +7,17 @@ $lighterMain: rgb(252, 193, 51);
 $secondarycolor: rgb(40, 40, 47);
 $thirdcolor: rgb(63, 183, 79);
 
+// .mainvideo{
+//   display: flex;
+//   iframe{
+//     width: 100%;
+//   }
+// }
+
 //nav
 body {
   margin: 0;
+  font-family: 'Montez', cursive;
 }
 .App {
   display: flex;
@@ -123,6 +131,14 @@ img {
   background-color: plum;
   border-radius: 50px;
   box-shadow: 20px 20px 20px 20px gray;
+  padding:10px 20px 10px 10px;
+  h1{
+    font-size: 50px;
+  }
+  span{
+    font-size: 90px;
+    color: white;
+  }
   a {
     text-decoration: none;
     //change color
@@ -131,6 +147,9 @@ img {
   a:hover {
     //hover color create a mixin
     cursor: pointer;
+  }
+  img{
+    border:2px solid white;
   }
 }
 
@@ -177,6 +196,7 @@ img {
       height: 250px;
       width: auto;
       margin: 0 auto;
+      box-shadow: -6px 4px 5px black;
     }
     h2 {
       grid-area: h2;
@@ -220,6 +240,9 @@ img {
 iframe {
   height: 40vh;
   margin: 20px;
+  border-radius: 60px;
+  box-shadow: -3px 3px 7px 10px black;
+  border-color: $lighterMain;
 }
 
 //footer
@@ -237,9 +260,9 @@ footer {
   border: none;
   color: #ffffff;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   padding: 20px;
-  width: 200px;
+  width: 170px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -271,7 +294,7 @@ footer {
 }
 
 .add {
-  padding: 15px 25px;
+  padding: 15px 15px;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
@@ -294,7 +317,7 @@ footer {
 }
 
 .update {
-  padding: 15px 25px;
+  padding: 15px 15px;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
@@ -320,4 +343,51 @@ footer {
   background-color: plum;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding-top: 20px;
+}
+.booki{
+  background-color: plum;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding-top: 10px;
+}
+footer{
+  background-color: $maincolor;
+  border: 2px solid $lighterMain;
+  box-shadow: -3px -1px 8px rgb(41, 41, 95);
+  color: white;
+}
+input[type=text]:focus {
+  background-color: lightblue;
+}
+.show{
+  background-color: plum;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+  iframe{
+    height: 200px;
+    width: 100%;
+  box-shadow: 4px 4px 9px black;
+  }
+  .mainPage{
+    margin: 5px 10px 5px 10px;
+    h1{
+      font-size: 20px;
+    }
+    span{
+      font-size: 40px;
+      color: white;
+    }
+    img{
+      height: 200px;
+      width: 100%;
+    }
+  }
 }
