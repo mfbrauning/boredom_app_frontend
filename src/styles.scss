@@ -89,7 +89,8 @@ nav {
     background-color: rgba(255, 255, 255, 0);
     border: none;
     img {
-      height: 100%;
+      margin-top: 0;
+      height: 4vh;
     }
   }
   button:hover {
@@ -137,16 +138,29 @@ img {
 //snacks
 .snacks {
   display: flex;
-  width: 70vh;
+  width: 100vh;
   margin: 0 auto;
   justify-content: space-around;
+  // background: $lighterMain;
+  border-radius: 5%;
+  // border: 2px solid $maincolor;
+
+  img {
+    width: 40vh;
+  }
 }
 
 .snackText {
-  height: 40vh;
+  width: 40vh;
+  height: 50vh;
   overflow: scroll;
+
+  border-radius: 5%;
+  border: 5px solid $lighterMain;
   li {
     font-size: 1rem;
+    margin-left: 0;
+    padding: 2%;
   }
 }
 
@@ -216,6 +230,7 @@ img {
 .showPages {
   display: flex;
   justify-content: space-evenly;
+  margin: 0 auto;
 }
 iframe {
   height: 40vh;
@@ -316,8 +331,65 @@ footer {
   transform: translateY(4px);
 }
 
-.moviei{
+.moviei {
   background-color: plum;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
+}
+
+//media query
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .showMenu {
+    flex-direction: row;
+    height: 6vh;
+    width: 100vh;
+    justify-content: start;
+    left: 0;
+    right: 0;
+    top: 7vh;
+    flex-wrap: warp;
+    div {
+      width: 5vh;
+      font-size: 15px;
+      font-weight: normal;
+      // margin-top: ;
+    }
+    img {
+      width: 4vh;
+    }
+  }
+  .cards {
+    width: 100%;
+    justify-content: space-around;
+    // flex-direction: column;
+    div {
+      width: 45%;
+    }
+  }
+  .showPages {
+    flex-direction: column;
+    margin: auto;
+    width: 100vh;
+
+    div {
+      width: auto;
+      img {
+        width: auto;
+      }
+    }
+  }
+  .snacks {
+    flex-direction: column;
+    img {
+      width: auto;
+    }
+    .snackText {
+      width: auto;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .cards {
+    flex-direction: column;
+  }
 }
