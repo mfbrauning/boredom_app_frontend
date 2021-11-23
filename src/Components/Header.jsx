@@ -23,20 +23,9 @@ function Header(props) {
     <div className="navContainer">
       <nav className="nav">
         <Link to="/">
-          <img src="https://i.imgur.com/3Sm3RMA.png" alt="icon" />
+          <img src="https://i.imgur.com/CUJNegc.png" alt="icon" />
         </Link>
-        <form>
-          <label>
-            <input
-              type="text"
-              value={newForm.name}
-              name="name"
-              onChange={handleChange}
-            />
-            <input type="submit" value="search for movies" />
-            <input type="submit" value="search for books" />
-          </label>
-        </form>
+
         <button onClick={handleToggle}>
           {navbarOpen ? (
             ""

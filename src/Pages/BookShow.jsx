@@ -123,7 +123,7 @@ function BookShow(props) {
             <img src={book.image} alt={book.title} />
           </div>
 
-          <div>
+          <div className="showContent">
             <h2>{book.author}</h2>
             <h3>{book.year}</h3>
             <h4>{book.genre}</h4>

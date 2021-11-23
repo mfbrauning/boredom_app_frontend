@@ -134,10 +134,10 @@ function MovieShow(props) {
       <section className="show">
         <div className="showPages">
           <div>
-            <h1>{movie.title}</h1>
             <img src={movie.image} />
+            <h1>{movie.title}</h1>
           </div>
-          <div>
+          <div className="showContent">
             <h3>Director: {movie.director}</h3>
             <h3>Year: {movie.year}</h3>
             <h3>Genre: {movie.genre}</h3>
