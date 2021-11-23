@@ -2,14 +2,22 @@
   // outline: 2px solid black;
   box-sizing: border-box;
 }
-$maincolor: rgb(228, 42, 105);
+$maincolor: #a658a8;
 $lighterMain: rgb(252, 193, 51);
 $secondarycolor: rgb(40, 40, 47);
 $thirdcolor: rgb(63, 183, 79);
 
+// .mainvideo{
+//   display: flex;
+//   iframe{
+//     width: 100%;
+//   }
+// }
+
 //nav
 body {
   margin: 0;
+  font-family: 'Bad Script', cursive;
 }
 .App {
   display: flex;
@@ -124,6 +132,14 @@ img {
   background-color: plum;
   border-radius: 50px;
   box-shadow: 20px 20px 20px 20px gray;
+  padding:10px 20px 10px 10px;
+  h1{
+    font-size: 40px;
+  }
+  span{
+    font-size: 90px;
+    color: white;
+  }
   a {
     text-decoration: none;
     //change color
@@ -132,6 +148,9 @@ img {
   a:hover {
     //hover color create a mixin
     cursor: pointer;
+  }
+  img{
+    border:2px solid white;
   }
 }
 
@@ -191,6 +210,7 @@ img {
       height: 250px;
       width: auto;
       margin: 0 auto;
+      box-shadow: -6px 4px 5px black;
     }
     h2 {
       grid-area: h2;
@@ -235,6 +255,9 @@ img {
 iframe {
   height: 40vh;
   margin: 20px;
+  border-radius: 60px;
+  box-shadow: -3px 3px 7px 10px black;
+  border-color: $lighterMain;
 }
 
 //footer
@@ -246,18 +269,40 @@ footer {
   flex: 0;
 }
 
+.edit {
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 15px;
+  width: 500px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: rgb(56, 28, 80);
+  background-color: #eae1eb;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
+  font-family: 'Bad Script', cursive;
+}
+
+input[type=text]{
+  font-size: 15px;
+  width: 300px;
+}
+
 #delete {
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #9b0e2d;
   border: none;
   color: #ffffff;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   padding: 20px;
-  width: 200px;
+  width: 170px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  font-family: 'Bad Script', cursive;
 }
 
 #delete span {
@@ -285,57 +330,55 @@ footer {
   right: 0;
 }
 
-.add {
-  padding: 15px 25px;
+
+.update, .add {
+  padding: 10px;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #04aa6d;
+  background-color: #a658a8;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
+  font-family: 'Bad Script', cursive;
+
 }
 
-.add:hover {
-  background-color: #3e8e41;
+.update:hover, .add:hover {
+  background-color: #bb82fc;
 }
 
-.add:active {
-  background-color: #3e8e41;
+.update:active, .add:active {
+  background-color: #9400f7;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-.update {
-  padding: 15px 25px;
-  font-size: 15px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #00a7f5;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.update:hover {
-  background-color: #00bef8;
-}
-
-.update:active {
-  background-color: #0094f7;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.moviei {
+.moviei{
   background-color: plum;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding: 20px;
 }
+.booki{
+  background-color: plum;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+}
+footer{
+  background-color: $maincolor;
+  border: 2px solid $lighterMain;
+  box-shadow: -3px -1px 8px rgb(41, 41, 95);
+  color: white;
+}
+
+
+
 
 //media query
 @media screen and (min-width: 320px) and (max-width: 600px) {
@@ -393,3 +436,37 @@ footer {
     flex-direction: column;
   }
 }
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+.show{
+  background-color: plum;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px 4px gray;
+  margin: 10px 10px 10px 10px;
+  padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+  iframe{
+    height: 200px;
+    width: 100%;
+  box-shadow: 4px 4px 9px black;
+  }
+  .mainPage{
+    margin: 5px 10px 5px 10px;
+    h1{
+      font-size: 20px;
+    }
+    span{
+      font-size: 40px;
+      color: white;
+    }
+    img{
+      height: 200px;
+      width: 100%;
+    }
+  }
+}
+

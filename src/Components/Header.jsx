@@ -23,7 +23,7 @@ function Header(props) {
     <div className="navContainer">
       <nav className="nav">
         <Link to="/">
-          <img src="https://i.imgur.com/CUJNegc.png" alt="" />
+          <img src="https://i.imgur.com/CUJNegc.png" alt="icon" />
         </Link>
 
         <button onClick={handleToggle}>
