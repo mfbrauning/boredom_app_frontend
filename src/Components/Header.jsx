@@ -25,7 +25,7 @@ function Header(props) {
         <Link to="/">
           <img src="https://i.imgur.com/CUJNegc.png" alt="icon" />
         </Link>
-
+        <h1>When Boredom Strikes</h1>
         <button onClick={handleToggle}>
           {navbarOpen ? (
             ""

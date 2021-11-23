@@ -2,8 +2,8 @@
   // outline: 2px solid black;
   box-sizing: border-box;
 }
-$maincolor: #a658a8;
-$lighterMain: rgb(252, 193, 51);
+$maincolor: #9C3AE1;
+$lighterMain: #7AFFA0;
 $secondarycolor: rgb(40, 40, 47);
 $thirdcolor: rgb(63, 183, 79);
 
@@ -14,10 +14,15 @@ $thirdcolor: rgb(63, 183, 79);
 //   }
 // }
 
+h1 {
+  font-size: 2em;
+}
+
 //nav
 body {
   margin: 0;
-  font-family: 'Bad Script', cursive;
+  font-family: 'Bebas Neue', cursive;
+
 }
 .App {
   display: flex;
@@ -29,6 +34,7 @@ body {
 }
 
 .showMenu {
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -56,6 +62,7 @@ body {
     letter-spacing: 5px;
     color: $secondarycolor;
     width: 30vh;
+    
 
     a {
       text-decoration: none;
@@ -82,9 +89,10 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  height: 7vh;
+  height: 10vh;
   background-color: $maincolor;
   padding: 5px;
+  font-family: 'Bebas Neue', cursive;
 
   img {
     height: 100%;
@@ -129,7 +137,7 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 8vh;
-  background-color: plum;
+  background-color: #FB99FD;
   border-radius: 50px;
   box-shadow: 20px 20px 20px 20px gray;
   padding:10px 20px 10px 10px;
@@ -138,7 +146,7 @@ img {
   }
   span{
     font-size: 90px;
-    color: white;
+    color: #7AFFA0;
   }
   a {
     text-decoration: none;
@@ -195,12 +203,12 @@ img {
   div {
     width: 30%;
 
-    display: grid;
-    grid-template-areas:
-      "img img img"
-      "h2 h2 h2"
-      "h3 h3 h3"
-      "h4 h4 h4";
+    // display: grid;
+    // grid-template-areas:
+    //   "img img img"
+    //   "h2 h2 h2"
+    //   "h3 h3 h3"
+    //   "h4 h4 h4";
     margin: 10px auto;
 
     border-radius: 5%;
@@ -282,7 +290,7 @@ footer {
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px #999;
-  font-family: 'Bad Script', cursive;
+  font-family: 'Bebas Neue', cursive
 }
 
 input[type=text]{
@@ -292,9 +300,9 @@ input[type=text]{
 
 #delete {
   border-radius: 4px;
-  background-color: #9b0e2d;
+  background-color: #7AFFA0;
   border: none;
-  color: #ffffff;
+  color: #9C3AE1;
   text-align: center;
   font-size: 15px;
   padding: 20px;
@@ -302,7 +310,7 @@ input[type=text]{
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  font-family: 'Bad Script', cursive;
+  font-family: 'Bebas Neue', cursive;
 }
 
 #delete span {
@@ -338,11 +346,11 @@ input[type=text]{
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #a658a8;
+  background-color: #9C3AE1;
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px #999;
-  font-family: 'Bad Script', cursive;
+  font-family: 'Bebas Neue', cursive;
 
 }
 
@@ -357,18 +365,18 @@ input[type=text]{
 }
 
 .moviei{
-  background-color: plum;
+  background-color: #FB99FD;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
   margin: 10px 10px 10px 10px;
   padding: 20px;
 }
 .booki{
-  background-color: plum;
+  background-color: #FB99FD;
   border-radius: 60px;
   box-shadow: 2px 2px 2px 4px gray;
   margin: 10px 10px 10px 10px;
-  padding: 10px;
+  padding: 20px;
 }
 footer{
   background-color: $maincolor;
@@ -382,6 +390,12 @@ footer{
 
 //media query
 @media screen and (min-width: 320px) and (max-width: 600px) {
+  .edit {
+    width: 50%;
+  }
+  input[type=text] {
+    width: 50%
+  }
   .showMenu {
     flex-direction: row;
     height: 6vh;
@@ -423,11 +437,12 @@ footer{
   }
   .snacks {
     flex-direction: column;
+    width: 50%;
     img {
-      width: auto;
+      width: 50%;
     }
     .snackText {
-      width: auto;
+      width: 70%;
     }
   }
 }

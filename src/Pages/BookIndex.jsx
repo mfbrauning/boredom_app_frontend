@@ -82,18 +82,19 @@ function BookIndex(props) {
   if (props.books) {
     return (
       <div className="booki">
-        
+        <h1>Books</h1>
         <div className="cards">
           {props.books.map((book) => {
             return (
               <div key={book._id} className="book">
+                <img src={book.image} alt={book.title} />
                 <Link to={`/books/${book._id}`}>
                   <h2> {book.title}</h2>
                 </Link>
 
                 <h3>Genre: {book.genre} </h3>
 
-                <img src={book.image} alt={book.title} />
+                
 
                 <h4>
                   <a href={book.link} alt={book.title}>

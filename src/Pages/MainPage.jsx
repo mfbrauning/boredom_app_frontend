@@ -22,7 +22,10 @@ function MainPage(props) {
   }, [props.books]);
 
   return (
+    <>
+    <img src="https://i.imgur.com/CUJNegc.png" alt="icon" />
     <section className="mainPage">
+      
       <div>
         <img src={mainState.image} alt={mainState.title} />
         <Link to={`/movies/${mainState._id}`}>
@@ -38,6 +41,7 @@ function MainPage(props) {
       <h1>Be free of boredom and <span>DANCE!!</span>, watch a chill movie, or read a freakin book for once! </h1>
       <iframe  width="100%" height="190" src="https://www.youtube.com/embed/EmnSm_d2ll4?autoplay=1&mute=1"></iframe>
     </section>
+    </>
   );
 }
 export default MainPage;

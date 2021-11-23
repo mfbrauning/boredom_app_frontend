@@ -105,17 +105,18 @@ function MovieIndex(props) {
   if (props.movies) {
     return (
       <section className="moviei">
-        
+        <h1>Movies</h1>
         <div className="cards">
           {props.movies.map((movie) => {
             return (
               <div key={movie._id}>
+                <img src={movie.image} />
                 <Link to={`/movies/${movie._id}`}>
                   <h2>{movie.title}</h2>
                 </Link>
                 <h3>Genre: {movie.genre}</h3>
                 <h4>Rating: {movie.rating}</h4>
-                <img src={movie.image} />
+                
               </div>
             );
           })}
