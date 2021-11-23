@@ -7,6 +7,13 @@ $lighterMain: rgb(252, 193, 51);
 $secondarycolor: rgb(40, 40, 47);
 $thirdcolor: rgb(63, 183, 79);
 
+// .mainvideo{
+//   display: flex;
+//   iframe{
+//     width: 100%;
+//   }
+// }
+
 //nav
 body {
   margin: 0;
@@ -125,7 +132,11 @@ img {
   border-radius: 50px;
   box-shadow: 20px 20px 20px 20px gray;
   padding:10px 40px 10px 10px;
+  h1{
+    font-size: 50px;
+  }
   span{
+    font-size: 90px;
     color: white;
   }
   a {
@@ -357,4 +368,26 @@ input[type=text]:focus {
   box-shadow: 2px 2px 2px 4px gray;
   margin: 10px 10px 10px 10px;
   padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+  iframe{
+    height: 200px;
+    width: 100%;
+  box-shadow: 4px 4px 9px black;
+  }
+  .mainPage{
+    margin: 5px 10px 5px 10px;
+    h1{
+      font-size: 20px;
+    }
+    span{
+      font-size: 40px;
+      color: white;
+    }
+    img{
+      height: 200px;
+      width: 100%;
+    }
+  }
 }
